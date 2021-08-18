@@ -11,6 +11,7 @@ struct GlobalVariable {
     
     static var url = "https://crudcrud.com/api/b55105ca36b34138a3c48e176a05aed2/"
     static var bayad = url + "bayad"
+    static var promo = "Promos"
 }
 
 struct Promo: Codable {

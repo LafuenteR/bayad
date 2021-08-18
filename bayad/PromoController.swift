@@ -8,23 +8,31 @@
 import UIKit
 import Alamofire
 
-class PromoController: UIViewController {
+class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var Promos = [Promo]()
+    @IBOutlet weak var promoTableView: UITableView!
+    var promos = [Promo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPromos()
+        self.title = GlobalVariable.promo
+        promoTableView.delegate = self
+        promoTableView.dataSource = self
+        promoTableView.register(UINib(nibName: "PromoCell", bundle: nil), forCellReuseIdentifier: "PromoCell")
+//        loadPromos()
     }
     
     func loadPromos() {
         Network.request(URLString: GlobalVariable.bayad) { success, response in
             if success! {
                 let decoder = JSONDecoder()
-                self.Promos.removeAll()
+                self.promos.removeAll()
                 if let thisPromos = try? decoder.decode([Promo].self, from: response as! Data) {
                     for promo in thisPromos {
-                        self.Promos.append(promo)
+                        self.promos.append(promo)
+                    }
+                    DispatchQueue.main.async {
+                        self.promoTableView.reloadData()
                     }
                 }
             }
@@ -32,5 +40,20 @@ class PromoController: UIViewController {
             print("Failed",response as Any)
         }
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return promos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = promoTableView.dequeueReusableCell(withIdentifier: "PromoCell", for: indexPath) as! PromoCell
+        cell.update(promo: promos[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
+
 
 }
