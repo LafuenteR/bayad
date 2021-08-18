@@ -23,6 +23,7 @@ class PromoDetailsController: UIViewController {
     func initPromoDetailsController() {
         nameLabel.text = promo!.name
         detailsTextVIew.text = promo!.details
+        detailsTextVIew.textColor = .lightGray
         let url = URL(string: promo!.image_url)
         imageView.contentMode = .scaleAspectFill
         imageView.kf.setImage(with: url)
