@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		BC9BDDF126CCEA70000BF964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDDF026CCEA70000BF964 /* AppDelegate.swift */; };
 		BC9BDDF326CCEA70000BF964 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDDF226CCEA70000BF964 /* SceneDelegate.swift */; };
-		BC9BDDF526CCEA70000BF964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDDF426CCEA70000BF964 /* ViewController.swift */; };
 		BC9BDDF826CCEA70000BF964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDF626CCEA70000BF964 /* Main.storyboard */; };
 		BC9BDDFA26CCEA75000BF964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDF926CCEA75000BF964 /* Assets.xcassets */; };
 		BC9BDDFD26CCEA75000BF964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDFB26CCEA75000BF964 /* LaunchScreen.storyboard */; };
 		BC9BDE0526CCEE27000BF964 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0426CCEE27000BF964 /* Network.swift */; };
 		BC9BDE0726CCF040000BF964 /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */; };
+		BC9BDE0926CCFEDA000BF964 /* PromoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0826CCFEDA000BF964 /* PromoController.swift */; };
 		D083F5AC2AE615847EC14192 /* Pods_bayad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2726DBBD1FCB9B3552AFA04E /* Pods_bayad.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +25,13 @@
 		BC9BDDED26CCEA70000BF964 /* bayad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bayad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9BDDF026CCEA70000BF964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC9BDDF226CCEA70000BF964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC9BDDF426CCEA70000BF964 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC9BDDF726CCEA70000BF964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC9BDDF926CCEA75000BF964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9BDDFC26CCEA75000BF964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC9BDDFE26CCEA75000BF964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC9BDE0426CCEE27000BF964 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
+		BC9BDE0826CCFEDA000BF964 /* PromoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			children = (
 				BC9BDDF026CCEA70000BF964 /* AppDelegate.swift */,
 				BC9BDDF226CCEA70000BF964 /* SceneDelegate.swift */,
-				BC9BDDF426CCEA70000BF964 /* ViewController.swift */,
+				BC9BDE0826CCFEDA000BF964 /* PromoController.swift */,
 				BC9BDE0426CCEE27000BF964 /* Network.swift */,
 				BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */,
 				BC9BDDF626CCEA70000BF964 /* Main.storyboard */,
@@ -211,9 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9BDDF526CCEA70000BF964 /* ViewController.swift in Sources */,
 				BC9BDE0726CCF040000BF964 /* GlobalVariable.swift in Sources */,
 				BC9BDDF126CCEA70000BF964 /* AppDelegate.swift in Sources */,
+				BC9BDE0926CCFEDA000BF964 /* PromoController.swift in Sources */,
 				BC9BDE0526CCEE27000BF964 /* Network.swift in Sources */,
 				BC9BDDF326CCEA70000BF964 /* SceneDelegate.swift in Sources */,
 			);
