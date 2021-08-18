@@ -24,12 +24,16 @@ class PromoCell: UITableViewCell {
     }
     
     func update(promo: Promo) {
-        nameLabel.text = promo.name
         detailsLabel.text = promo.details
         detailsLabel.textColor = .lightGray
         if promo.read == 0 {
             self.backgroundColor = .systemGray5
+            let image = UIImage(systemName: "circle.fill")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+            nameLabel.updateLabel(image: image!, with: " \(promo.name)")
+        } else {
+            nameLabel.text = promo.name
         }
     }
-    
 }
+
+
