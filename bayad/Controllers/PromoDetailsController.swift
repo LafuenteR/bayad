@@ -9,9 +9,15 @@ import UIKit
 
 class PromoDetailsController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailsTextVIew: UITextView!
+    var promo: Promo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameLabel.text = promo!.name
+        detailsTextVIew.text = promo!.details
         // Do any additional setup after loading the view.
     }
     

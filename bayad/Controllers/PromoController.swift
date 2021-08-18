@@ -15,11 +15,15 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initController()
+        loadPromos()
+    }
+    
+    func initController() {
         self.title = GlobalVariable.promo
         promoTableView.delegate = self
         promoTableView.dataSource = self
         promoTableView.register(UINib(nibName: "PromoCell", bundle: nil), forCellReuseIdentifier: "PromoCell")
-//        loadPromos()
     }
     
     func loadPromos() {
@@ -53,6 +57,18 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "viewPromo", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewPromo" {
+            let viewController = segue.destination as! PromoDetailsController
+            let selectedRow = sender as? Int
+            viewController.promo = promos[selectedRow!]
+        }
     }
 
 
