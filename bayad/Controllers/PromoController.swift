@@ -24,40 +24,9 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
         promoTableView.delegate = self
         promoTableView.dataSource = self
         promoTableView.register(UINib(nibName: "PromoCell", bundle: nil), forCellReuseIdentifier: "PromoCell")
+        promoTableView.tableFooterView = UIView()
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
         promoTableView.addGestureRecognizer(longPressGesture)
-    }
-    
-    @objc func longPress(sender: UILongPressGestureRecognizer) {
-        if sender.state == UIGestureRecognizer.State.began {
-            let touchPoint = sender.location(in: promoTableView)
-            if promoTableView.indexPathForRow(at: touchPoint) != nil {
-                let promoIndex = promoTableView.indexPathForRow(at: touchPoint)?.row
-                print(promos[promoIndex!].name)
-                deleteAlert(promo: promos[promoIndex!])
-            }
-        }
-    }
-    
-    func deleteAlert(promo: Promo) {
-        let alert = UIAlertController(title: "Delete this promo?", message: "\(promo.name)",preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
-            //Cancel Action
-        }))
-        alert.addAction(UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: {(_: UIAlertAction!) in
-            self.deletePromo(id: promo._id)
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func deletePromo(id: String) {
-        let url = GlobalVariable.bayad + "/\(id)"
-        Network.request(URLString: url, method: .delete) { success, response in
-            self.loadPromos()
-        } failed: { failed, response in
-            print("Failed",response as Any)
-        }
     }
     
     func loadPromos() {
@@ -80,6 +49,11 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if promos.count == 0 {
+            self.promoTableView.setEmptyMessage("No Promos")
+        } else {
+            self.promoTableView.restore()
+        }
         return promos.count
     }
     
