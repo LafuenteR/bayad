@@ -102,8 +102,7 @@
 				BC9BDE0E26CD00AF000BF964 /* PromoCell */,
 				BC9BDE0426CCEE27000BF964 /* Network.swift */,
 				BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */,
-				BC9BDE1426CD565B000BF964 /* UILabelExtension.swift */,
-				BC9BDE1826CD619A000BF964 /* UITableViewExtension.swift */,
+				BC9BDE1B26CD6560000BF964 /* Extensions */,
 				BC9BDDF626CCEA70000BF964 /* Main.storyboard */,
 				BC9BDDF926CCEA75000BF964 /* Assets.xcassets */,
 				BC9BDDFB26CCEA75000BF964 /* LaunchScreen.storyboard */,
@@ -124,11 +123,36 @@
 		BC9BDE1126CD06D7000BF964 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BC9BDE0826CCFEDA000BF964 /* PromoController.swift */,
-				BC9BDE1626CD5B5A000BF964 /* PromoControllerExtension.swift */,
-				BC9BDE0F26CD06D2000BF964 /* PromoDetailsController.swift */,
+				BC9BDE1A26CD651E000BF964 /* PromoController */,
+				BC9BDE1C26CD6574000BF964 /* PromoDetailsController */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC9BDE1A26CD651E000BF964 /* PromoController */ = {
+			isa = PBXGroup;
+			children = (
+				BC9BDE0826CCFEDA000BF964 /* PromoController.swift */,
+				BC9BDE1626CD5B5A000BF964 /* PromoControllerExtension.swift */,
+			);
+			path = PromoController;
+			sourceTree = "<group>";
+		};
+		BC9BDE1B26CD6560000BF964 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC9BDE1426CD565B000BF964 /* UILabelExtension.swift */,
+				BC9BDE1826CD619A000BF964 /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC9BDE1C26CD6574000BF964 /* PromoDetailsController */ = {
+			isa = PBXGroup;
+			children = (
+				BC9BDE0F26CD06D2000BF964 /* PromoDetailsController.swift */,
+			);
+			path = PromoDetailsController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

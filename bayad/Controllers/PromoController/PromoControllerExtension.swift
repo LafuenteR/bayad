@@ -23,7 +23,7 @@ extension PromoController {
     }
     
     func deleteAlert(promo: Promo) {
-        let alert = UIAlertController(title: "DELETE", message: "\(promo.name)",preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "", message: "\(promo.name)",preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
             //Cancel Action

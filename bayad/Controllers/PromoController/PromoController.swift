@@ -16,7 +16,6 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         initController()
-        loadPromos()
     }
     
     func initController() {
@@ -27,6 +26,10 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
         promoTableView.tableFooterView = UIView()
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
         promoTableView.addGestureRecognizer(longPressGesture)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadPromos()
     }
     
     func loadPromos() {
