@@ -32,7 +32,7 @@ class PromoDetailsController: UIViewController {
     
     func updatePromo(id: String) {
         let url = GlobalVariable.bayad + "/\(id)"
-        Network.request(URLString: url, method: .patch) { success, response in
+        Network.request(URLString: url, method: .put) { success, response in
             print("updatePromo",success,response)
         } failed: { failed, response in
             print("Failed",response as Any)
