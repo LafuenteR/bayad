@@ -7,5 +7,6 @@ target 'bayad' do
 
   # Pods for bayad
   pod 'Alamofire', '~> 5.4'
+  pod 'Kingfisher', '~> 6.0'
 
 end

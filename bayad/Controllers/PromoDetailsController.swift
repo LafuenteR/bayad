@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PromoDetailsController: UIViewController {
 
@@ -16,20 +17,25 @@ class PromoDetailsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = promo!.name
-        detailsTextVIew.text = promo!.details
-        // Do any additional setup after loading the view.
+        initPromoDetailsController()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initPromoDetailsController() {
+        nameLabel.text = promo!.name
+        detailsTextVIew.text = promo!.details
+        let url = URL(string: promo!.image_url)
+        imageView.contentMode = .scaleAspectFill
+        imageView.kf.setImage(with: url)
+//        updatePromo(id: promo!._id)
     }
-    */
+    
+    func updatePromo(id: String) {
+        let url = GlobalVariable.bayad + "/\(id)"
+        Network.request(URLString: url, method: .patch) { success, response in
+            print("updatePromo",success,response)
+        } failed: { failed, response in
+            print("Failed",response as Any)
+        }
+    }
 
 }

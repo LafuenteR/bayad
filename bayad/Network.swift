@@ -16,12 +16,20 @@ class Network: NSObject {
     //Handling Network Request
     static func request(URLString: String, method: HTTPMethod, successed: @escaping complete, failed: @escaping complete) {
         AF.request(URLString, method: method).responseJSON { response in
-//            print("Response: ", response.value)
+            print("Response: ", response.value)
             switch response.result {
             case .success(_):
-                successed(true, response.data)
+                if method == .get {
+                    successed(true, response.data)
+                } else {
+                    successed(true, response.value)
+                }
             case .failure(_):
-                successed(false, response.data)
+                if method == .get {
+                    successed(false, response.data)
+                } else {
+                    successed(false, response.value)
+                }
             }
         }
     }
