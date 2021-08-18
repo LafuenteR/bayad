@@ -13,9 +13,13 @@
 		BC9BDDF826CCEA70000BF964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDF626CCEA70000BF964 /* Main.storyboard */; };
 		BC9BDDFA26CCEA75000BF964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDF926CCEA75000BF964 /* Assets.xcassets */; };
 		BC9BDDFD26CCEA75000BF964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDFB26CCEA75000BF964 /* LaunchScreen.storyboard */; };
+		D083F5AC2AE615847EC14192 /* Pods_bayad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2726DBBD1FCB9B3552AFA04E /* Pods_bayad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2726DBBD1FCB9B3552AFA04E /* Pods_bayad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bayad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		674B2DE98D726FC94BD370C8 /* Pods-bayad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bayad.release.xcconfig"; path = "Target Support Files/Pods-bayad/Pods-bayad.release.xcconfig"; sourceTree = "<group>"; };
+		BA469E0CF941B66DEBF34199 /* Pods-bayad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bayad.debug.xcconfig"; path = "Target Support Files/Pods-bayad/Pods-bayad.debug.xcconfig"; sourceTree = "<group>"; };
 		BC9BDDED26CCEA70000BF964 /* bayad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bayad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9BDDF026CCEA70000BF964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC9BDDF226CCEA70000BF964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D083F5AC2AE615847EC14192 /* Pods_bayad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29BD637DFF3509ED7E9814FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA469E0CF941B66DEBF34199 /* Pods-bayad.debug.xcconfig */,
+				674B2DE98D726FC94BD370C8 /* Pods-bayad.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		506696B6B5502B5FD74CD8EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2726DBBD1FCB9B3552AFA04E /* Pods_bayad.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC9BDDE426CCEA70000BF964 = {
 			isa = PBXGroup;
 			children = (
 				BC9BDDEF26CCEA70000BF964 /* bayad */,
 				BC9BDDEE26CCEA70000BF964 /* Products */,
+				29BD637DFF3509ED7E9814FE /* Pods */,
+				506696B6B5502B5FD74CD8EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC9BDE0126CCEA75000BF964 /* Build configuration list for PBXNativeTarget "bayad" */;
 			buildPhases = (
+				3BFE85BD80C1C9730BEA1C03 /* [CP] Check Pods Manifest.lock */,
 				BC9BDDE926CCEA70000BF964 /* Sources */,
 				BC9BDDEA26CCEA70000BF964 /* Frameworks */,
 				BC9BDDEB26CCEA70000BF964 /* Resources */,
+				F945C4C9B59C367BE5ADD78C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BFE85BD80C1C9730BEA1C03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bayad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F945C4C9B59C367BE5ADD78C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bayad/Pods-bayad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bayad/Pods-bayad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bayad/Pods-bayad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC9BDDE926CCEA70000BF964 /* Sources */ = {
@@ -283,12 +352,14 @@
 		};
 		BC9BDE0226CCEA75000BF964 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA469E0CF941B66DEBF34199 /* Pods-bayad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8P46ZX55J8;
 				INFOPLIST_FILE = bayad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,18 +367,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lafuenter.bayad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BC9BDE0326CCEA75000BF964 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 674B2DE98D726FC94BD370C8 /* Pods-bayad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8P46ZX55J8;
 				INFOPLIST_FILE = bayad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lafuenter.bayad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
