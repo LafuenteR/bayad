@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		BC9BDDF826CCEA70000BF964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDF626CCEA70000BF964 /* Main.storyboard */; };
 		BC9BDDFA26CCEA75000BF964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDF926CCEA75000BF964 /* Assets.xcassets */; };
 		BC9BDDFD26CCEA75000BF964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDDFB26CCEA75000BF964 /* LaunchScreen.storyboard */; };
+		BC9BDE0526CCEE27000BF964 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0426CCEE27000BF964 /* Network.swift */; };
+		BC9BDE0726CCF040000BF964 /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */; };
 		D083F5AC2AE615847EC14192 /* Pods_bayad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2726DBBD1FCB9B3552AFA04E /* Pods_bayad.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		BC9BDDF926CCEA75000BF964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9BDDFC26CCEA75000BF964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC9BDDFE26CCEA75000BF964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9BDE0426CCEE27000BF964 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				BA469E0CF941B66DEBF34199 /* Pods-bayad.debug.xcconfig */,
 				674B2DE98D726FC94BD370C8 /* Pods-bayad.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +87,8 @@
 				BC9BDDF026CCEA70000BF964 /* AppDelegate.swift */,
 				BC9BDDF226CCEA70000BF964 /* SceneDelegate.swift */,
 				BC9BDDF426CCEA70000BF964 /* ViewController.swift */,
+				BC9BDE0426CCEE27000BF964 /* Network.swift */,
+				BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */,
 				BC9BDDF626CCEA70000BF964 /* Main.storyboard */,
 				BC9BDDF926CCEA75000BF964 /* Assets.xcassets */,
 				BC9BDDFB26CCEA75000BF964 /* LaunchScreen.storyboard */,
@@ -207,7 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9BDDF526CCEA70000BF964 /* ViewController.swift in Sources */,
+				BC9BDE0726CCF040000BF964 /* GlobalVariable.swift in Sources */,
 				BC9BDDF126CCEA70000BF964 /* AppDelegate.swift in Sources */,
+				BC9BDE0526CCEE27000BF964 /* Network.swift in Sources */,
 				BC9BDDF326CCEA70000BF964 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
