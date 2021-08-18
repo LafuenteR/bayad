@@ -34,6 +34,7 @@
                     <navigationItem key="navigationItem" id="B1l-NU-bQ2"/>
                     <connections>
                         <outlet property="promoTableView" destination="9uK-Gv-SC6" id="fYJ-0l-AI5"/>
+                        <segue destination="Ws2-4y-Udd" kind="show" identifier="viewPromo" id="Ivt-Gk-PNN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -57,6 +58,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFr-Hy-UNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="75"/>
+        </scene>
+        <!--Promo Details Controller-->
+        <scene sceneID="wAv-Ku-ffa">
+            <objects>
+                <viewController id="Ws2-4y-Udd" customClass="PromoDetailsController" customModule="bayad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2z8-SU-lap">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lyp-z4-P53"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SKq-aO-ArW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ap8-4o-phQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="75"/>
         </scene>
     </scenes>
     <resources>

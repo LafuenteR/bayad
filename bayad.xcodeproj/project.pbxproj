@@ -17,6 +17,7 @@
 		BC9BDE0926CCFEDA000BF964 /* PromoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0826CCFEDA000BF964 /* PromoController.swift */; };
 		BC9BDE0C26CD009D000BF964 /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0A26CD009D000BF964 /* PromoCell.swift */; };
 		BC9BDE0D26CD009D000BF964 /* PromoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9BDE0B26CD009D000BF964 /* PromoCell.xib */; };
+		BC9BDE1026CD06D2000BF964 /* PromoDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BDE0F26CD06D2000BF964 /* PromoDetailsController.swift */; };
 		D083F5AC2AE615847EC14192 /* Pods_bayad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2726DBBD1FCB9B3552AFA04E /* Pods_bayad.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		BC9BDE0826CCFEDA000BF964 /* PromoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoController.swift; sourceTree = "<group>"; };
 		BC9BDE0A26CD009D000BF964 /* PromoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
 		BC9BDE0B26CD009D000BF964 /* PromoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoCell.xib; sourceTree = "<group>"; };
+		BC9BDE0F26CD06D2000BF964 /* PromoDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDetailsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 			children = (
 				BC9BDDF026CCEA70000BF964 /* AppDelegate.swift */,
 				BC9BDDF226CCEA70000BF964 /* SceneDelegate.swift */,
-				BC9BDE0826CCFEDA000BF964 /* PromoController.swift */,
+				BC9BDE1126CD06D7000BF964 /* Controllers */,
 				BC9BDE0E26CD00AF000BF964 /* PromoCell */,
 				BC9BDE0426CCEE27000BF964 /* Network.swift */,
 				BC9BDE0626CCF040000BF964 /* GlobalVariable.swift */,
@@ -109,6 +111,15 @@
 				BC9BDE0B26CD009D000BF964 /* PromoCell.xib */,
 			);
 			path = PromoCell;
+			sourceTree = "<group>";
+		};
+		BC9BDE1126CD06D7000BF964 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC9BDE0826CCFEDA000BF964 /* PromoController.swift */,
+				BC9BDE0F26CD06D2000BF964 /* PromoDetailsController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9BDE0726CCF040000BF964 /* GlobalVariable.swift in Sources */,
+				BC9BDE1026CD06D2000BF964 /* PromoDetailsController.swift in Sources */,
 				BC9BDDF126CCEA70000BF964 /* AppDelegate.swift in Sources */,
 				BC9BDE0926CCFEDA000BF964 /* PromoController.swift in Sources */,
 				BC9BDE0526CCEE27000BF964 /* Network.swift in Sources */,
