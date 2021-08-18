@@ -24,10 +24,22 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
         promoTableView.delegate = self
         promoTableView.dataSource = self
         promoTableView.register(UINib(nibName: "PromoCell", bundle: nil), forCellReuseIdentifier: "PromoCell")
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
+        promoTableView.addGestureRecognizer(longPressGesture)
+    }
+    
+    @objc func longPress(sender: UILongPressGestureRecognizer) {
+        if sender.state == UIGestureRecognizer.State.began {
+            let touchPoint = sender.location(in: promoTableView)
+            if promoTableView.indexPathForRow(at: touchPoint) != nil {
+                let promoIndex = promoTableView.indexPathForRow(at: touchPoint)?.row
+                print(promos[promoIndex!].name)
+            }
+        }
     }
     
     func loadPromos() {
-        Network.request(URLString: GlobalVariable.bayad) { success, response in
+        Network.request(URLString: GlobalVariable.bayad, method: .get) { success, response in
             if success! {
                 let decoder = JSONDecoder()
                 self.promos.removeAll()

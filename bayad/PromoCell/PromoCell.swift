@@ -26,6 +26,9 @@ class PromoCell: UITableViewCell {
     func update(promo: Promo) {
         nameLabel.text = promo.name
         detailsLabel.text = promo.details
+        if promo.read == 0 {
+            self.backgroundColor = .systemGray5
+        }
     }
     
 }
