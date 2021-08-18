@@ -31,6 +31,7 @@ class PromoCell: UITableViewCell {
             let image = UIImage(systemName: "circle.fill")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
             nameLabel.updateLabel(image: image!, with: " \(promo.name)")
         } else {
+            self.backgroundColor = .white
             nameLabel.text = promo.name
         }
     }

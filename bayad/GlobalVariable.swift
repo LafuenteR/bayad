@@ -9,7 +9,7 @@ import Foundation
 
 struct GlobalVariable {
     
-    static var url = "https://crudcrud.com/api/4e044677f5f84475bbf39e6b1149dc07/"
+    static var url = "https://crudcrud.com/api/35191adc8b814609afb336b6068eab0e/"
     static var bayad = url + "bayad"
     static var promo = "Promos"
 }
