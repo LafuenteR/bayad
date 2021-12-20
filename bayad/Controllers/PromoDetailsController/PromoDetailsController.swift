@@ -27,12 +27,15 @@ class PromoDetailsController: UIViewController {
         let url = URL(string: promo!.image_url)
         imageView.contentMode = .scaleAspectFill
         imageView.kf.setImage(with: url)
-//        updatePromo(id: promo!._id)
+        updatePromo(promo: promo!)
     }
     
-    func updatePromo(id: String) {
-        let url = GlobalVariable.bayad + "/\(id)"
-        Network.request(URLString: url, method: .put) { success, response in
+    func updatePromo(promo: Promo) {
+        let url = GlobalVariable.bayad + "/\(promo._id)"
+        let urlParam = url + "?name=\(promo.name)3&details=\(promo.details)&image_url=\(promo.image_url)"
+        print("url",urlParam)
+        let parameter = ["name": promo.name,"details":promo.details, "image_url":promo.image_url]
+        Network.request(URLString: url, method: .put, parameter: parameter) { success, response in
             print("updatePromo",success,response)
         } failed: { failed, response in
             print("Failed",response as Any)

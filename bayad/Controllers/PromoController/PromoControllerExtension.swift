@@ -36,7 +36,7 @@ extension PromoController {
     
     func deletePromo(id: String) {
         let url = GlobalVariable.bayad + "/\(id)"
-        Network.request(URLString: url, method: .delete) { success, response in
+        Network.request(URLString: url, method: .delete, parameter: nil) { success, response in
             self.loadPromos()
         } failed: { failed, response in
             print("Failed",response as Any)

@@ -33,7 +33,7 @@ class PromoController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func loadPromos() {
-        Network.request(URLString: GlobalVariable.bayad, method: .get) { success, response in
+        Network.request(URLString: GlobalVariable.bayad, method: .get, parameter: nil) { success, response in
             if success! {
                 let decoder = JSONDecoder()
                 self.promos.removeAll()
